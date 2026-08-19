@@ -1,2 +1,1359 @@
-# JAIGIRCHAK-UNITED-CULTURAL-AND-SPORTS-CLUB-
-MY BHARAT 
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAIGIRCHAK UNITED CULTURAL AND SPORTS CLUB (JUCSC)</title>
+    <meta name="description" content="JAIGIRCHAK UNITED CULTURAL AND SPORTS CLUB (JUCSC) - Working for Environment, Sports and Social Development">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #138808; /* Indian Flag Green */
+            --saffron-color: #FF9933; /* Indian Flag Saffron */
+            --navy-blue: #000080;    /* Ashoka Chakra Blue */
+            --secondary-color: #0d6efd; 
+            --dark-color: #212529;
+            --light-color: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-color);
+            scroll-behavior: smooth;
+        }
+
+        /* Hide all sections by default */
+        .page-section {
+            display: none;
+            min-height: calc(100vh - 76px - 150px);
+        }
+
+        /* Show the active section */
+        .page-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Navbar Styling with Indian Flag Tricolor */
+        .navbar-triranga {
+            background: linear-gradient(135deg, #FF9933 0%, #FF9933 33%, #FFFFFF 33%, #FFFFFF 66%, #138808 66%, #138808 100%) !important;
+            border-bottom: 3px solid var(--navy-blue);
+            transition: all 0.3s ease;
+        }
+
+        /* Responsive tricolor gradient on mobile */
+        @media (max-width: 991px) {
+            .navbar-triranga {
+                background: linear-gradient(to right, #FF9933, #FFFFFF, #138808) !important;
+            }
+            .navbar-collapse {
+                background: rgba(255, 255, 255, 0.98);
+                padding: 15px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                margin-top: 10px;
+            }
+            .nav-link {
+                color: #212529 !important;
+            }
+        }
+
+        .logo-img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            background-color: #ffffff;
+            border-radius: 50%;
+            padding: 2px;
+            border: 2px solid var(--navy-blue);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            margin-right: 10px;
+        }
+
+        .brand-text {
+            font-weight: 800;
+            color: #000080 !important;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+            font-size: 1.25rem;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-link {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.88rem;
+            letter-spacing: 0.5px;
+            padding: 8px 12px !important;
+            color: #000080 !important;
+            text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+        
+        .nav-link.active, .nav-link:hover {
+            color: #ffffff !important;
+            background-color: var(--navy-blue);
+            text-shadow: none;
+        }
+
+        /* Navbar Toggler Customization */
+        .navbar-toggler {
+            border: 2px solid var(--navy-blue) !important;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        .navbar-toggler-icon {
+            filter: invert(10%) sepia(90%) saturate(5000%) hue-rotate(230deg);
+        }
+
+        /* Hero Sections Styling */
+        .hero {
+            background: linear-gradient(rgba(25, 135, 84, 0.8), rgba(13, 110, 253, 0.8)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .hero .overlay {
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero h1 {
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Card Styling */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px;
+            border: none;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        }
+
+        /* Gallery Styling */
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            border-radius: 8px;
+            background-color: #ddd;
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.03);
+            cursor: pointer;
+        }
+
+        /* Committee Card Styling */
+        .committee-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        .committee-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Admin Login Specific Styling */
+        #login-section {
+            background: linear-gradient(135deg, #FF9933, #138808);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-box {
+            width: 100%;
+            max-width: 400px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            margin: 20px;
+        }
+        .login-logo-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: contain;
+            background-color: #fff;
+            padding: 5px;
+            border: 3px solid var(--navy-blue);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        .login-box .form-control {
+            height: 50px;
+            border-radius: 8px;
+        }
+        .login-box .btn-success {
+            height: 50px;
+            font-size: 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            background-color: var(--primary-color);
+        }
+
+        .img-placeholder {
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            font-style: italic;
+            border-radius: 8px;
+            min-height: 300px;
+        }
+
+        /* Notice Ticker Styling */
+        .notice-ticker-card {
+            background: #ffffff;
+            border-left: 5px solid var(--saffron-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-radius: 10px;
+        }
+        .notice-item {
+            display: inline-block;
+            transition: color 0.2s ease, transform 0.2s ease;
+            padding: 2px 8px;
+            border-radius: 5px;
+        }
+        .notice-item:hover {
+            color: #0d6efd !important;
+            text-decoration: underline;
+            background-color: rgba(13, 110, 253, 0.05);
+        }
+
+        /* Social Buttons Custom Style */
+        .btn-facebook {
+            background-color: #1877f2 !important;
+            color: #ffffff !important;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        .btn-facebook:hover {
+            background-color: #0b5ed7 !important;
+            transform: scale(1.1);
+            color: #ffffff !important;
+        }
+
+        .btn-whatsapp {
+            background-color: #25d366 !important;
+            color: #ffffff !important;
+            border: none;
+            font-weight: 600;
+        }
+        .btn-whatsapp:hover {
+            background-color: #128c7e !important;
+            color: #ffffff !important;
+        }
+
+        .btn-sms {
+            background-color: #0d6efd !important;
+            color: #ffffff !important;
+            border: none;
+            font-weight: 600;
+        }
+        .btn-sms:hover {
+            background-color: #0b5ed7 !important;
+            color: #ffffff !important;
+        }
+
+        footer {
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- মূল নেভিগেশন (ভারতের পতাকার ত্রিরঙ্গা থিম) -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-triranga shadow sticky-top" id="main-nav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#" onclick="showPage('home')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" alt="অশোকস্তম্ভ লোগো" class="logo-img">
+                <span class="brand-text">JUCSC</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link nav-item-link" href="#home" onclick="showPage('home')">হোম</a></li>
+                    <li class="nav-item"><a class="nav-link nav-item-link" href="#about" onclick="showPage('about')">আমাদের সম্পর্কে</a></li>
+                    <li class="nav-item"><a class="nav-link nav-item-link" href="#environment" onclick="showPage('environment')">পরিবেশ</a></li>
+                    <li class="nav-item"><a class="nav-link nav-item-link" href="#sports" onclick="showPage('sports')">খেলাধুলা</a></li>
+                    <li class="nav-item"><a class="nav-link nav-item-link" href="#cultural" onclick="showPage('cultural')">সাংস্কৃতিক</a></li>
+                    <li class="nav-item"><a class="nav-link nav-item-link" href="#gallery" onclick="showPage('gallery')">গ্যালারি</a></li>
+                    <li class="nav-item"><a class="nav-link nav-item-link" href="#committee" onclick="showPage('committee')">কমিটি</a></li>
+                    <li class="nav-item"><a class="nav-link nav-item-link" href="#news" onclick="showPage('news')">খবরাখবর</a></li>
+                    <li class="nav-item"><a class="nav-link nav-item-link" href="#contact" onclick="showPage('contact')">যোগাযোগ</a></li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a class="btn btn-dark btn-sm rounded-pill px-3 shadow-sm" href="#login" onclick="showPage('login')"><i class="fas fa-lock me-1"></i> এডমিন</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- এডমিন লগইন পেজ -->
+    <div id="login" class="page-section active">
+        <div id="login-section">
+            <div class="login-box">
+                <div class="text-center mb-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" alt="অশোকস্তম্ভ লোগো" class="login-logo-img mb-3">
+                    <h3 class="fw-bold text-success">JUCSC</h3>
+                    <p class="text-muted">এডমিন লগইন প্যানেল</p>
+                </div>
+                
+                <form id="loginForm" onsubmit="event.preventDefault(); alert('লগইন সফল হয়েছে।'); showPage('home');">
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">ব্যবহারকারী নাম</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="fas fa-user text-success"></i></span>
+                            <input type="text" class="form-control" placeholder="ইউজারনেম লিখুন" required>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="form-label fw-bold">পাসওয়ার্ড</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="fas fa-lock text-success"></i></span>
+                            <input type="password" class="form-control" placeholder="পাসওয়ার্ড লিখুন" required>
+                        </div>
+                    </div>
+                    
+                    <div class="d-grid mb-3">
+                        <button type="submit" class="btn btn-success">
+                            <i class="fas fa-sign-in-alt me-2"></i>লগইন
+                        </button>
+                    </div>
+                    <div class="d-grid">
+                         <button type="button" class="btn btn-outline-secondary" onclick="showPage('home')">
+                            <i class="fas fa-arrow-left me-2"></i>সাইটে ফিরে যান
+                        </button>
+                    </div>
+                </form>
+                
+                <div class="text-center mt-3">
+                    <a href="#" class="text-decoration-none text-success">পাসওয়ার্ড ভুলে গেছেন?</a>
+                </div>
+                <hr>
+                <div class="text-center text-muted small">
+                    © 2026 JAIGIRCHAK UNITED CULTURAL AND SPORTS CLUB
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- হোম পেজ -->
+    <div id="home" class="page-section">
+        <section class="hero text-center d-flex align-items-center" style="min-height: 75vh;">
+            <div class="overlay d-flex flex-column justify-content-center">
+                <div class="container text-white">
+                    <h1 class="display-4 fw-bolder mb-3">JAIGIRCHAK UNITED CULTURAL AND SPORTS CLUB</h1>
+                    <h3 class="fw-light mb-4">পরিবেশ, খেলাধুলা ও মানব কল্যাণে নিবেদিত</h3>
+                    <p class="lead mb-5">প্রতিষ্ঠা : ২০১৬</p>
+                    <button onclick="showPage('about')" class="btn btn-warning btn-lg px-5 rounded-pill shadow">আরও জানুন</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- নোটিশ স্লাইডার (Notice Ticker) -->
+        <div class="container my-4">
+            <div class="card notice-ticker-card p-2">
+                <div class="card-body p-1 d-flex align-items-center flex-wrap flex-md-nowrap">
+                    <div class="badge bg-danger text-white fs-6 px-3 py-2 me-md-3 mb-2 mb-md-0 d-flex align-items-center shadow-sm rounded-pill flex-shrink-0">
+                        <i class="fas fa-bullhorn me-2 fa-bounce"></i> আপকামিং নোটিশ ও আপডেট
+                    </div>
+                    <div class="flex-grow-1 overflow-hidden position-relative py-1">
+                        <marquee onmouseover="this.stop();" onmouseout="this.start();" scrollamount="6" behavior="scroll" direction="left" class="align-middle fw-semibold text-dark">
+                            <span class="notice-item me-5" onclick="showPage('sports')" style="cursor: pointer;">
+                                <span class="badge bg-primary me-1"><i class="fas fa-futbol me-1"></i> খেলাধুলা</span> ⚽ বার্ষিক ফুটবল ও ক্রিকেট টুর্নামেন্ট অনুষ্ঠিত হতে চলেছে - বিস্তারিত দেখতে এখানে ক্লিক করুন!
+                            </span>
+                            <span class="notice-item me-5" onclick="showPage('environment')" style="cursor: pointer;">
+                                <span class="badge bg-success me-1"><i class="fas fa-leaf me-1"></i> পরিবেশ</span> 🌳 পরিবেশ সুরক্ষায় বিশাল বৃক্ষরোপণ কর্মসূচি - অংশগ্রহণ করতে ক্লিক করুন!
+                            </span>
+                            <span class="notice-item me-5" onclick="showPage('cultural')" style="cursor: pointer;">
+                                <span class="badge bg-danger me-1"><i class="fas fa-theater-masks me-1"></i> সাংস্কৃতিক</span> 🎭 ১৫ই আগস্ট স্বাধীনতা দিবস উৎসব ও বাৎসরিক সাংস্কৃতিক অনুষ্ঠান - বিস্তারিত দেখুন!
+                            </span>
+                            <span class="notice-item me-5" onclick="showPage('news')" style="cursor: pointer;">
+                                <span class="badge bg-warning text-dark me-1"><i class="fas fa-tint me-1"></i> সমাজসেবা</span> 🩸 রক্তদান শিবির ও বিনামূল্যে স্বাস্থ্য পরীক্ষা ক্যাম্পাইন - আরও জানুন!
+                            </span>
+                        </marquee>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="container py-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="text-success fw-bold border-bottom border-success pb-2 d-inline-block">JUCSC-তে স্বাগতম</h2>
+                    <p class="lead mt-4">
+                        JAIGIRCHAK UNITED CULTURAL AND SPORTS CLUB (JUCSC) প্রতিষ্ঠিত হয় ২০১৬ সালে।
+                    </p>
+                    <p>
+                        আমাদের মূল লক্ষ্য হলো পরিবেশ রক্ষা, বৃক্ষরোপণ, সমাজসেবা, খেলাধুলা এবং সাংস্কৃতিক কার্যক্রমের মাধ্যমে একটি সচেতন ও সুস্থ সমাজ গড়ে তোলা।
+                    </p>
+                    <button onclick="showPage('about')" class="btn btn-outline-success mt-3">বিস্তারিত পড়ুন <i class="fas fa-arrow-right ms-1"></i></button>
+                </div>
+                <div class="col-lg-6">
+                    <div class="img-placeholder shadow">
+                        <i class="fas fa-users fa-4x mb-2"></i><br>ক্লাবের সদস্যদের ছবি
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="text-success fw-bold">আমাদের কার্যাবলী</h2>
+                    <p class="text-muted">একটি সবুজ, সুস্থ ও ঐক্যবদ্ধ সমাজের দিকে</p>
+                    <div class="mx-auto bg-success" style="height: 3px; width: 60px;"></div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0 h-100 text-center p-4">
+                            <div class="card-body d-flex flex-column">
+                                <div class="mb-4">
+                                    <i class="fa-solid fa-tree fa-4x text-success"></i>
+                                </div>
+                                <h4 class="fw-bold">পরিবেশ</h4>
+                                <p class="flex-grow-1 text-muted">আমরা নিয়মিত বৃক্ষরোপণ, পরিবেশ সচেতনতা, পরিচ্ছন্নতা অভিযান এবং প্লাস্টিকমুক্ত গ্রাম গঠনের জন্য কাজ করি।</p>
+                                <button onclick="showPage('environment')" class="btn btn-success mt-auto">আরও পড়ুন</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0 h-100 text-center p-4">
+                            <div class="card-body d-flex flex-column">
+                                <div class="mb-4">
+                                    <i class="fa-solid fa-futbol fa-4x text-primary"></i>
+                                </div>
+                                <h4 class="fw-bold">খেলাধুলা</h4>
+                                <p class="flex-grow-1 text-muted">যুব সমাজকে খেলাধুলায় উৎসাহিত করতে ফুটবল, ক্রিকেট, ভলিবলসহ বিভিন্ন প্রতিযোগিতার আয়োজন করা হয়।</p>
+                                <button onclick="showPage('sports')" class="btn btn-primary mt-auto">আরও পড়ুন</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0 h-100 text-center p-4">
+                            <div class="card-body d-flex flex-column">
+                                <div class="mb-4">
+                                    <i class="fa-solid fa-masks-theater fa-4x text-danger"></i>
+                                </div>
+                                <h4 class="fw-bold">সাংস্কৃতিক</h4>
+                                <p class="flex-grow-1 text-muted">বিভিন্ন জাতীয় দিবস, সাংস্কৃতিক অনুষ্ঠান ও সমাজসেবামূলক কর্মসূচির মাধ্যমে সমাজকে একত্রিত করা হয়।</p>
+                                <button onclick="showPage('cultural')" class="btn btn-danger mt-auto">আরও পড়ুন</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- আমাদের সম্পর্কে পেজ -->
+    <div id="about" class="page-section">
+        <section class="hero text-center py-5" style="padding: 60px 0; background: linear-gradient(rgba(25, 135, 84, 0.9), rgba(13, 110, 253, 0.9));">
+            <div class="container text-white">
+                <h1 class="display-5 fw-bold">আমাদের ক্লাব সম্পর্কে</h1>
+                <p class="lead">২০১৬ সাল থেকে প্রকৃতি, খেলাধুলা ও সমাজের সেবা</p>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="img-placeholder shadow">
+                        <i class="fas fa-building fa-4x mb-2"></i><br>ক্লাব ভবন বা দলগত ছবি
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <h2 class="text-success fw-bold mb-4">JAIGIRCHAK UNITED CULTURAL AND SPORTS CLUB</h2>
+                    <p class="text-muted" style="line-height: 1.8;">
+                        JAIGIRCHAK UNITED CULTURAL AND SPORTS CLUB (JUCSC) প্রতিষ্ঠিত হয় ২০১৬ সালে। 
+                        আমাদের ক্লাবের মূল উদ্দেশ্য হলো পরিবেশ রক্ষা, সমাজসেবা, খেলাধুলার প্রসার এবং সাংস্কৃতিক কর্মকাণ্ডের মাধ্যমে একটি সচেতন ও সুস্থ সমাজ গড়ে তোলা।
+                    </p>
+                    <p class="text-muted" style="line-height: 1.8;">
+                        আমরা নিয়মিত বৃক্ষরোপণ, পরিচ্ছন্নতা অভিযান, রক্তদান শিবির, খেলাধুলা এবং বিভিন্ন সামাজিক উদ্যোগের মাধ্যমে মানুষের পাশে থাকার চেষ্টা করি।
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-light py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="bg-white p-5 rounded shadow-sm h-100 border-start border-success border-5">
+                            <h3 class="text-success fw-bold mb-4">
+                                <i class="fa-solid fa-eye me-2"></i>আমাদের দৃষ্টিভঙ্গি (Vision)
+                            </h3>
+                            <p class="text-muted fs-5">
+                                একটি সবুজ, দূষণমুক্ত, শিক্ষিত ও সুস্থ সমাজ গঠন করা যেখানে মানুষ, প্রকৃতি এবং জীববৈচিত্র্য একসাথে নিরাপদে বসবাস করতে পারে।
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="bg-white p-5 rounded shadow-sm h-100 border-start border-primary border-5">
+                            <h3 class="text-primary fw-bold mb-4">
+                                <i class="fa-solid fa-bullseye me-2"></i>আমাদের লক্ষ্য (Mission)
+                            </h3>
+                            <ul class="list-unstyled text-muted fs-5">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> বৃক্ষরোপণ</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> খেলাধুলার প্রসার</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> সাংস্কৃতিক উন্নয়ন</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> সমাজসেবা</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> যুব সমাজকে একত্রিত করা</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="text-success fw-bold">আমাদের উদ্দেশ্যসমূহ</h2>
+                <div class="mx-auto bg-success" style="height: 3px; width: 60px;"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fa-solid fa-tree fa-3x text-success mb-3 bg-light p-4 rounded-circle"></i>
+                            <h4 class="fw-bold mt-2">সবুজ পরিবেশ</h4>
+                            <p class="text-muted">বেশি বেশি গাছ লাগানো এবং পরিবেশ রক্ষা করা।</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fa-solid fa-futbol fa-3x text-primary mb-3 bg-light p-4 rounded-circle"></i>
+                            <h4 class="fw-bold mt-2">খেলাধুলা</h4>
+                            <p class="text-muted">যুব সমাজকে খেলাধুলার প্রতি উৎসাহিত করা।</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="fa-solid fa-handshake-angle fa-3x text-danger mb-3 bg-light p-4 rounded-circle"></i>
+                            <h4 class="fw-bold mt-2">সমাজসেবা</h4>
+                            <p class="text-muted">সমাজের মানুষের পাশে দাঁড়ানো এবং সচেতনতা বৃদ্ধি করা।</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- পরিবেশ পেজ -->
+    <div id="environment" class="page-section">
+        <section class="hero text-center py-5" style="padding: 60px 0; background: linear-gradient(rgba(25, 135, 84, 0.9), rgba(40, 167, 69, 0.8));">
+            <div class="container text-white">
+                <h1 class="display-5 fw-bold">পরিবেশ রক্ষা</h1>
+                <p class="lead">প্রকৃতি বাঁচান • ভবিষ্যৎ বাঁচান</p>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="img-placeholder shadow" style="background-color: #d4edda; color: #155724;">
+                        <i class="fas fa-leaf fa-4x mb-2"></i><br>বৃক্ষরোপণ অভিযানের ছবি
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <h2 class="text-success fw-bold mb-4">সবুজ পৃথিবীর জন্য কাজ</h2>
+                    <p class="text-muted fs-5" style="line-height: 1.8;">
+                        JAIGIRCHAK UNITED CULTURAL AND SPORTS CLUB (JUCSC) বিশ্বাস করে প্রকৃতিকে রক্ষা করা মানেই ভবিষ্যৎকে রক্ষা করা।
+                    </p>
+                    <p class="text-muted fs-5" style="line-height: 1.8;">
+                        আমরা নিয়মিত বৃক্ষরোপণ, পরিচ্ছন্নতা অভিযান, পরিবেশ সচেতনতা এবং প্লাস্টিকমুক্ত গ্রাম গঠনের জন্য কাজ করে চলেছি।
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-light py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="text-success fw-bold">আমাদের পরিবেশগত কার্যক্রম</h2>
+                    <div class="mx-auto bg-success" style="height: 3px; width: 60px;"></div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body text-center p-4">
+                                <i class="fa-solid fa-tree fa-4x text-success mb-3"></i>
+                                <h4 class="fw-bold">বৃক্ষরোপণ</h4>
+                                <p class="text-muted">প্রতি বছর শত শত গাছ লাগিয়ে সবুজ পরিবেশ গড়ে তোলা।</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body text-center p-4">
+                                <i class="fa-solid fa-recycle fa-4x text-primary mb-3"></i>
+                                <h4 class="fw-bold">পরিচ্ছন্ন গ্রাম</h4>
+                                <p class="text-muted">গ্রাম পরিষ্কার রাখা এবং প্লাস্টিকমুক্ত পরিবেশ তৈরি করা।</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body text-center p-4">
+                                <i class="fa-solid fa-earth-asia fa-4x text-warning mb-3"></i>
+                                <h4 class="fw-bold">সচেতনতা</h4>
+                                <p class="text-muted">মানুষের মধ্যে পরিবেশ রক্ষার সচেতনতা বৃদ্ধি করা।</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-md-6 order-md-2">
+                    <div class="img-placeholder shadow" style="background-color: #c3e6cb; color: #155724; min-height: 250px;">
+                        <i class="fas fa-bullseye fa-3x mb-2"></i><br>ভবিষ্যৎ লক্ষ্যের ছবি
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h2 class="text-success fw-bold mb-4">আমাদের ভবিষ্যৎ লক্ষ্য</h2>
+                    <ul class="list-group list-group-flush border rounded shadow-sm">
+                        <li class="list-group-item p-3 fs-5"><i class="fas fa-tree text-success me-3"></i> ১০,০০০+ গাছ রোপণ</li>
+                        <li class="list-group-item p-3 fs-5"><i class="fas fa-recycle text-success me-3"></i> সম্পূর্ণ প্লাস্টিকমুক্ত গ্রাম</li>
+                        <li class="list-group-item p-3 fs-5"><i class="fas fa-seedling text-success me-3"></i> পরিবেশ শিক্ষা শিবির</li>
+                        <li class="list-group-item p-3 fs-5"><i class="fas fa-tint text-success me-3"></i> জল সংরক্ষণ প্রকল্প</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- খেলাধুলা পেজ -->
+    <div id="sports" class="page-section">
+        <section class="hero text-center py-5" style="padding: 60px 0; background: linear-gradient(rgba(13, 110, 253, 0.9), rgba(0, 0, 0, 0.7));">
+            <div class="container text-white">
+                <h1 class="display-5 fw-bold">খেলাধুলা কার্যক্রম</h1>
+                <p class="lead">সুস্থ দেহ • সুস্থ মন</p>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="img-placeholder shadow" style="background-color: #cce5ff; color: #004085;">
+                        <i class="fas fa-running fa-4x mb-2"></i><br>ক্রীড়া ইভেন্টের ছবি
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <h2 class="text-primary fw-bold mb-4">ক্রীড়া বিকাশ</h2>
+                    <p class="text-muted fs-5" style="line-height: 1.8;">
+                        JUCSC-এর অন্যতম লক্ষ্য হলো গ্রামের শিশু ও যুব সমাজকে খেলাধুলার মাধ্যমে সুস্থ, শৃঙ্খলাবদ্ধ ও আত্মবিশ্বাসী হিসেবে গড়ে তোলা।
+                    </p>
+                    <p class="text-muted fs-5" style="line-height: 1.8;">
+                        আমরা প্রতিবছর বিভিন্ন ক্রীড়া প্রতিযোগিতার আয়োজন করি এবং নতুন প্রতিভাদের উৎসাহিত করি।
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-light py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="text-primary fw-bold">যেসব খেলাধুলা আমরা উৎসাহ দেই</h2>
+                    <div class="mx-auto bg-primary" style="height: 3px; width: 60px;"></div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body text-center p-4">
+                                <i class="fa-solid fa-futbol fa-3x text-success mb-3"></i>
+                                <h5 class="fw-bold">ফুটবল</h5>
+                                <p class="text-muted small">বার্ষিক ফুটবল টুর্নামেন্ট ও প্রশিক্ষণ।</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body text-center p-4">
+                                <i class="fa-solid fa-baseball-bat-ball fa-3x text-primary mb-3"></i>
+                                <h5 class="fw-bold">ক্রিকেট</h5>
+                                <p class="text-muted small">ক্রিকেট প্রতিযোগিতা ও যুব প্রশিক্ষণ।</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body text-center p-4">
+                                <i class="fa-solid fa-volleyball fa-3x text-warning mb-3"></i>
+                                <h5 class="fw-bold">ভলিবল</h5>
+                                <p class="text-muted small">গ্রামীণ ভলিবল প্রতিযোগিতা।</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body text-center p-4">
+                                <i class="fa-solid fa-medal fa-3x text-danger mb-3"></i>
+                                <h5 class="fw-bold">টুর্নামেন্ট</h5>
+                                <p class="text-muted small">বার্ষিক ক্রীড়া উৎসব ও পুরস্কার বিতরণ।</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-md-6 order-md-2">
+                    <div class="img-placeholder shadow" style="background-color: #b8daff; color: #004085; min-height: 250px;">
+                        <i class="fas fa-trophy fa-3x mb-2"></i><br>ট্রফি বা জয়ী দলের ছবি
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h2 class="text-primary fw-bold mb-4">আমাদের ক্রীড়া দৃষ্টিভঙ্গি</h2>
+                    <ul class="list-group list-group-flush border rounded shadow-sm">
+                        <li class="list-group-item p-3 fs-5"><i class="fas fa-futbol text-primary me-3"></i> ফুটবল একাডেমি গঠন</li>
+                        <li class="list-group-item p-3 fs-5"><i class="fas fa-baseball-ball text-primary me-3"></i> ক্রিকেট প্রশিক্ষণ</li>
+                        <li class="list-group-item p-3 fs-5"><i class="fas fa-trophy text-primary me-3"></i> বার্ষিক ক্রীড়া প্রতিযোগিতা</li>
+                        <li class="list-group-item p-3 fs-5"><i class="fas fa-medal text-primary me-3"></i> গ্রামীণ प्रतिभा বিকাশ</li>
+                        <li class="list-group-item p-3 fs-5"><i class="fas fa-dumbbell text-primary me-3"></i> সুস্থ যুব সমাজ গঠন</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- সাংস্কৃতিক পেজ -->
+    <div id="cultural" class="page-section">
+        <section class="hero text-center py-5" style="padding: 60px 0; background: linear-gradient(rgba(220, 53, 69, 0.9), rgba(0, 0, 0, 0.7));">
+            <div class="container text-white">
+                <h1 class="display-5 fw-bold">সাংস্কৃতিক কার্যক্রম</h1>
+                <p class="lead">সংস্কৃতি • ঐক্য • ঐতিহ্য</p>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="img-placeholder shadow" style="background-color: #f8d7da; color: #721c24;">
+                        <i class="fas fa-theater-masks fa-4x mb-2"></i><br>সাংস্কৃতিক অনুষ্ঠানের ছবি
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <h2 class="text-danger fw-bold mb-4">আমাদের সাংস্কৃতিক লক্ষ্য</h2>
+                    <p class="text-muted fs-5" style="line-height: 1.8;">
+                        JAIGIRCHAK UNITED CULTURAL AND SPORTS CLUB (JUCSC) সমাজের সাংস্কৃতিক ঐতিহ্য রক্ষা এবং নতুন প্রজন্মকে সংস্কৃতির সঙ্গে যুক্ত রাখতে নিয়মিত বিভিন্ন সাংস্কৃতিক অনুষ্ঠানের আয়োজন করে।
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-light py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="text-danger fw-bold">প্রধান সাংস্কৃতিক অনুষ্ঠানসমূহ</h2>
+                    <div class="mx-auto bg-danger" style="height: 3px; width: 60px;"></div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body text-center p-4">
+                                <i class="fa-solid fa-flag fa-4x text-success mb-3"></i>
+                                <h4 class="fw-bold">স্বাধীনতা দিবস</h4>
+                                <p class="text-muted">১৫ই আগস্ট জাতীয় পতাকা উত্তোলন ও সাংস্কৃতিক অনুষ্ঠান।</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body text-center p-4">
+                                <i class="fa-solid fa-music fa-4x text-danger mb-3"></i>
+                                <h4 class="fw-bold">সাংস্কৃতিক উৎসব</h4>
+                                <p class="text-muted">নৃত্য, সংগীত, আবৃত্তি ও নাট্য পরিবেশনা।</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body text-center p-4">
+                                <i class="fa-solid fa-people-group fa-4x text-primary mb-3"></i>
+                                <h4 class="fw-bold">সামাজিক সচেতনতা</h4>
+                                <p class="text-muted">সচেতনতামূলক সভা ও সামাজিক উদ্যোগ।</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-md-6 order-md-2">
+                    <div class="img-placeholder shadow" style="background-color: #f5c6cb; color: #721c24; min-height: 350px;">
+                        <i class="fas fa-calendar-alt fa-3x mb-2"></i><br>উৎসব উদযাপনের ছবি
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h2 class="text-danger fw-bold mb-4">বার্ষিক উদযাপন</h2>
+                    <ul class="list-group list-group-flush border rounded shadow-sm">
+                        <li class="list-group-item p-3 fs-5"><i class="fas fa-flag text-danger me-3"></i> 🇮🇳 স্বাধীনতা দিবস</li>
+                        <li class="list-group-item p-3 fs-5"><i class="fas fa-flag-checkered text-danger me-3"></i> 🇮🇳 প্রজাতন্ত্র দিবস</li>
+                        <li class="list-group-item p-3 fs-5"><i class="fas fa-theater-masks text-danger me-3"></i> 🎭 সাংস্কৃতিক অনুষ্ঠান</li>
+                        <li class="list-group-item p-3 fs-5"><i class="fas fa-book-open text-danger me-3"></i> 🎤 রবীন্দ্র জয়ন্তী</li>
+                        <li class="list-group-item p-3 fs-5"><i class="fas fa-music text-danger me-3"></i> 🎶 নজরুল জয়ন্তী</li>
+                        <li class="list-group-item p-3 fs-5"><i class="fas fa-om text-danger me-3"></i> 🙏 দুর্গাপূজা</li>
+                        <li class="list-group-item p-3 fs-5"><i class="fas fa-book text-danger me-3"></i> 📚 সরস্বতী পূজা</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- গ্যালারি পেজ -->
+    <div id="gallery" class="page-section">
+        <section class="hero text-center py-5" style="padding: 60px 0; background: linear-gradient(rgba(33, 37, 41, 0.9), rgba(33, 37, 41, 0.7));">
+            <div class="container text-white">
+                <h1 class="display-5 fw-bold">ফটো গ্যালারি</h1>
+                <p class="lead">সেবা, প্রকৃতি এবং খেলাধুলার কিছু মুহূর্ত</p>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="text-dark fw-bold">আমাদের গ্যালারি</h2>
+                <div class="mx-auto bg-dark" style="height: 3px; width: 60px;"></div>
+            </div>
+            
+            <div class="row gallery g-4">
+                <div class="col-md-4 col-sm-6">
+                    <div class="img-placeholder shadow h-100">গ্যালারি ছবি ১</div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="img-placeholder shadow h-100">গ্যালারি ছবি ২</div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="img-placeholder shadow h-100">গ্যালারি ছবি ৩</div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="img-placeholder shadow h-100">গ্যালারি ছবি ৪</div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="img-placeholder shadow h-100">গ্যালারি ছবি ৫</div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="img-placeholder shadow h-100">গ্যালারি ছবি ৬</div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="img-placeholder shadow h-100">গ্যালারি ছবি ৭</div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="img-placeholder shadow h-100">গ্যালারি ছবি ৮</div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="img-placeholder shadow h-100">গ্যালারি ছবি ৯</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-success text-white py-5 mt-4">
+            <div class="container text-center py-4">
+                <h2 class="fst-italic fw-bold mb-3">"প্রকৃতি আমাদের ভবিষ্যৎ"</h2>
+                <p class="lead mb-0">প্রতিটি গাছ, প্রতিটি শিশু, প্রতিটি হাসি মূল্যবান।</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- কমিটি পেজ -->
+    <div id="committee" class="page-section">
+        <section class="hero text-center py-5" style="padding: 60px 0; background: linear-gradient(rgba(25, 135, 84, 0.9), rgba(0, 0, 0, 0.8));">
+            <div class="container text-white">
+                <h1 class="display-5 fw-bold">নির্বাহী কমিটি</h1>
+                <p class="lead">আমাদের নিবেদিতপ্রাণ দল</p>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <div class="row g-4 justify-content-center mb-5">
+                <!-- সভাপতি -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="committee-card">
+                        <div class="mx-auto bg-light rounded-circle d-flex align-items-center justify-content-center" style="width:150px; height:150px; border:3px solid var(--primary-color); margin-bottom:15px;">
+                            <i class="fas fa-user-tie fa-4x text-secondary"></i>
+                        </div>
+                        <h3 class="fw-bold">Mr Subhajit Paria</h3>
+                        <h5 class="text-success fw-bold mb-3">সভাপতি (President)</h5>
+                        <p class="text-muted small">সামাজিক উন্নয়ন এবং পরিবেশ সুরক্ষার দিকে ক্লাবকে নেতৃত্ব দিচ্ছেন।</p>
+                    </div>
+                </div>
+                <!-- সম্পাদক -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="committee-card">
+                        <div class="mx-auto bg-light rounded-circle d-flex align-items-center justify-content-center" style="width:150px; height:150px; border:3px solid var(--primary-color); margin-bottom:15px;">
+                            <i class="fas fa-user-tie fa-4x text-secondary"></i>
+                        </div>
+                        <h3 class="fw-bold">Mr Soumitra Paria</h3>
+                        <h5 class="text-success fw-bold mb-3">সম্পাদক (Secretary)</h5>
+                        <p class="text-muted small">ক্লাবের কার্যাবলী পরিচালনা ও সমস্ত ইভেন্ট সমন্বয় করছেন।</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow border-0">
+                        <div class="card-header bg-success text-white text-center py-3">
+                            <h3 class="mb-0"><i class="fa-solid fa-users me-2"></i> কমিটির সদস্যবৃন্দ</h3>
+                        </div>
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush text-center fs-5">
+                                <li class="list-group-item py-3">Mr Sanjay Paria</li>
+                                <li class="list-group-item py-3 bg-light">Mr Subhendhu Paria</li>
+                                <li class="list-group-item py-3">Mr Sandeep Guchhait</li>
+                                <li class="list-group-item py-3 bg-light">Mr Krishnendu Santra</li>
+                                <li class="list-group-item py-3">Mr Santu Santra</li>
+                                <li class="list-group-item py-3 bg-light">Mr Atanu Kar</li>
+                                <li class="list-group-item py-3">Mr Dipankar Bera</li>
+                                <li class="list-group-item py-3 bg-light">Mr Krishna Prasad Paria</li>
+                                <li class="list-group-item py-3">Mr Pabitra Paria</li>
+                                <li class="list-group-item py-3 bg-light">Mr Krishnendu Paria</li>
+                                <li class="list-group-item py-3">Mr Sumanta Maity</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-dark text-white py-5 mt-4">
+            <div class="container text-center py-4">
+                <h2 class="fw-bold mb-3 text-warning">আমাদের শক্তি হলো ঐক্য</h2>
+                <p class="lead mb-0">একসাথে আমরা পরিবেশ, খেলাধুলা, সংস্কৃতি এবং সমাজকল্যাণের জন্য কাজ করি।</p>
+            </div>
+        </section>
+    </div>
+    
+    <!-- খবরাখবর পেজ -->
+    <div id="news" class="page-section">
+        <section class="hero text-center py-5" style="padding: 60px 0; background: linear-gradient(rgba(13, 110, 253, 0.9), rgba(25, 135, 84, 0.8));">
+            <div class="container text-white">
+                <h1 class="display-5 fw-bold">খবরাখবর ও ইভেন্ট</h1>
+                <p class="lead">JUCSC-এর সর্বশেষ আপডেট</p>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="text-success fw-bold">সর্বশেষ খবর</h2>
+                <div class="mx-auto bg-success" style="height: 3px; width: 60px;"></div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="card shadow-sm h-100 border-0 border-top border-success border-4">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h4 class="fw-bold text-success mb-3">🌳 বৃক্ষরোপণ অভিযান</h4>
+                            <p class="flex-grow-1 text-muted">JUCSC-এর উদ্যোগে গ্রামে বৃক্ষরোপণ কর্মসূচি সফলভাবে অনুষ্ঠিত হয়েছে।</p>
+                            <div class="mt-3 pt-3 border-top text-muted small fw-bold">
+                                <i class="far fa-calendar-alt me-1"></i> তারিখ : ০৫ জুন ২০২৬
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card shadow-sm h-100 border-0 border-top border-primary border-4">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h4 class="fw-bold text-primary mb-3">⚽ বার্ষিক ফুটবল টুর্নামেন্ট</h4>
+                            <p class="flex-grow-1 text-muted">বার্ষিক ফুটবল প্রতিযোগিতা আগামী মাসে অনুষ্ঠিত হবে।</p>
+                            <div class="mt-3 pt-3 border-top text-muted small fw-bold">
+                                <i class="fas fa-hourglass-half me-1 text-warning"></i> শীঘ্রই আসছে
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card shadow-sm h-100 border-0 border-top border-danger border-4">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h4 class="fw-bold text-danger mb-3">🎭 সাংস্কৃতিক অনুষ্ঠান</h4>
+                            <p class="flex-grow-1 text-muted">স্বাধীনতা দিবস উপলক্ষে সাংস্কৃতিক অনুষ্ঠান অনুষ্ঠিত হবে।</p>
+                            <div class="mt-3 pt-3 border-top text-muted small fw-bold">
+                                <i class="far fa-calendar-alt me-1"></i> ১৫ আগস্ট ২০২৬
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-light py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="text-center mb-4">
+                            <h2 class="text-primary fw-bold">আসন্ন ইভেন্টসমূহ</h2>
+                            <div class="mx-auto bg-primary" style="height: 3px; width: 60px;"></div>
+                        </div>
+                        <div class="card shadow-sm border-0">
+                            <ul class="list-group list-group-flush fs-5">
+                                <li class="list-group-item p-4 d-flex align-items-center">
+                                    <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width:40px; height:40px;"><i class="fas fa-leaf"></i></div>
+                                    মেগা বৃক্ষরোপণ ক্যাম্পেইন
+                                </li>
+                                <li class="list-group-item p-4 d-flex align-items-center bg-light">
+                                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width:40px; height:40px;"><i class="fas fa-futbol"></i></div>
+                                    ফুটবল চ্যাম্পিয়নশিপ
+                                </li>
+                                <li class="list-group-item p-4 d-flex align-items-center">
+                                    <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width:40px; height:40px;"><i class="fas fa-baseball-ball"></i></div>
+                                    ক্রিকেট টুর্নামেন্ট
+                                </li>
+                                <li class="list-group-item p-4 d-flex align-items-center bg-light">
+                                    <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width:40px; height:40px;"><i class="fas fa-tint"></i></div>
+                                    রক্তদান শিবির
+                                </li>
+                                <li class="list-group-item p-4 d-flex align-items-center">
+                                    <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-3" style="width:40px; height:40px;"><i class="fas fa-theater-masks"></i></div>
+                                    বার্ষিক সাংস্কৃতিক উৎসব
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="container py-5">
+            <div class="alert alert-warning border-warning border-start border-5 shadow-sm p-4 d-flex align-items-center">
+                <i class="fas fa-bullhorn fa-3x text-warning me-4"></i>
+                <div>
+                    <h4 class="alert-heading fw-bold">ক্লাব নোটিশ</h4>
+                    <p class="mb-0 fs-5">পরবর্তী কোন কর্মসূচি নিয়ে এখন পর্যন্ত কোনরূপ কোন আলোচনা করা হয়নি।</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- যোগাযোগ পেজ -->
+    <div id="contact" class="page-section">
+        <section class="hero text-center py-5" style="padding: 60px 0; background: linear-gradient(rgba(33, 37, 41, 0.9), rgba(25, 135, 84, 0.8));">
+            <div class="container text-white">
+                <h1 class="display-5 fw-bold">যোগাযোগ করুন</h1>
+                <p class="lead">আপনাদের কথা শুনতে আমরা সবসময় আনন্দিত</p>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body p-5">
+                            <h3 class="text-success fw-bold mb-4">যোগাযোগের তথ্য</h3>
+                            
+                            <div class="d-flex mb-4">
+                                <div class="bg-light text-success rounded-circle d-flex align-items-center justify-content-center me-3 shrink-0" style="width:50px; height:50px;">
+                                    <i class="fa-solid fa-location-dot fs-4"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">ঠিকানা</h5>
+                                    <p class="text-muted mb-0">
+                                        গ্রাম ও পোস্ট : জায়গিরচক<br>
+                                        থানা : ময়না<br>
+                                        জেলা : পূর্ব মেদিনীপুর<br>
+                                        পশ্চিমবঙ্গ - ৭২১৬৪৪
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex mb-4">
+                                <div class="bg-light text-success rounded-circle d-flex align-items-center justify-content-center me-3 shrink-0" style="width:50px; height:50px;">
+                                    <i class="fa-solid fa-phone fs-4"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">ফোন করুন</h5>
+                                    <p class="text-muted mb-0">
+                                        +৯১ ৭৩৮৪১৬৯৯৯০<br>
+                                        +৯১ ৮৩৯১৮৪২৭৭৪
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex">
+                                <div class="bg-light text-success rounded-circle d-flex align-items-center justify-content-center me-3 shrink-0" style="width:50px; height:50px;">
+                                    <i class="fa-solid fa-envelope fs-4"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">ইমেইল করুন</h5>
+                                    <p class="text-muted mb-0 text-break">
+                                        subhajitparia45@gmail.com<br>
+                                        soumitraparia4@gmail.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-7">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body p-5">
+                            <h3 class="text-success fw-bold mb-2">বার্তা পাঠান</h3>
+                            <p class="text-muted small mb-4">তথ্য পূরণ করে আপনার পছন্দের মাধ্যমে বার্তাটি ৭৩৮৪১৬৯৯৯০ নম্বর এ পাঠান:</p>
+                            
+                            <form id="contactForm" onsubmit="event.preventDefault();">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="name" placeholder="আপনার নাম" required>
+                                            <label for="name">আপনার নাম</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="tel" class="form-control" id="phone" placeholder="আপনার ফোন নম্বর">
+                                            <label for="phone">আপনার ফোন নম্বর</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="subject" placeholder="বিষয়" required>
+                                            <label for="subject">বিষয়</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating mb-3">
+                                            <textarea class="form-control" placeholder="এখানে বার্তা লিখুন" id="message" style="height: 140px" required></textarea>
+                                            <label for="message">বার্তা</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- দুটি বাটন: WhatsApp এবং SMS -->
+                                    <div class="col-md-6 mb-2">
+                                        <button class="btn btn-whatsapp btn-lg w-100 py-3 rounded-3 shadow-sm d-flex align-items-center justify-content-center" type="button" onclick="sendMessage('whatsapp')">
+                                            <i class="fab fa-whatsapp fs-3 me-2"></i> WhatsApp-এ পাঠান
+                                        </button>
+                                    </div>
+                                    <div class="col-md-6 mb-2">
+                                        <button class="btn btn-sms btn-lg w-100 py-3 rounded-3 shadow-sm d-flex align-items-center justify-content-center" type="button" onclick="sendMessage('sms')">
+                                            <i class="fas fa-comment-dots fs-4 me-2"></i> SMS-এ পাঠান
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container pb-5">
+            <h3 class="text-center text-dark fw-bold mb-4">ম্যাপে আমাদের খুঁজুন</h3>
+            <div class="card border-0 shadow-sm p-2">
+                <div class="ratio ratio-21x9 rounded overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117983.83296184518!2d87.73449170397576!3d22.21558235552377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02c813501a3ce5%3A0xb351db8f83be992c!2sMoyna%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1701234567890!5m2!1sen!2sin" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        style="border:0;">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ফুটার -->
+    <footer class="bg-dark text-white pt-5 pb-3 border-top border-success border-3" id="main-footer" style="background: linear-gradient(135deg, #121619 0%, #1f2833 100%) !important; display: none;">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-warning fw-bold mb-3 d-flex align-items-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" alt="অশোকস্তম্ভ লোগো" class="logo-img me-2" style="width: 35px; height: 35px;">
+                        JUCSC
+                    </h5>
+                    <p class="text-light small" style="opacity: 0.85;">
+                        JAIGIRCHAK UNITED CULTURAL AND SPORTS CLUB is dedicated to building a greener, healthier, and united society through environment protection, sports, and cultural activities since 2016.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-warning fw-bold mb-3 border-bottom border-warning pb-2 d-inline-block">কুইক লিঙ্কস (Quick Links)</h5>
+                    <ul class="list-unstyled mt-2">
+                        <li class="mb-2"><a href="#" class="text-info text-decoration-none fw-semibold" onclick="showPage('about')"><i class="fas fa-chevron-right me-2 text-warning small"></i>আমাদের সম্পর্কে</a></li>
+                        <li class="mb-2"><a href="#" class="text-info text-decoration-none fw-semibold" onclick="showPage('environment')"><i class="fas fa-chevron-right me-2 text-warning small"></i>পরিবেশ</a></li>
+                        <li class="mb-2"><a href="#" class="text-info text-decoration-none fw-semibold" onclick="showPage('sports')"><i class="fas fa-chevron-right me-2 text-warning small"></i>খেলাধুলা</a></li>
+                        <li class="mb-2"><a href="#" class="text-info text-decoration-none fw-semibold" onclick="showPage('gallery')"><i class="fas fa-chevron-right me-2 text-warning small"></i>গ্যালারি</a></li>
+                        <li class="mb-2"><a href="#" class="text-info text-decoration-none fw-semibold" onclick="showPage('contact')"><i class="fas fa-chevron-right me-2 text-warning small"></i>যোগাযোগ করুন</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <h5 class="text-warning fw-bold mb-3 border-bottom border-warning pb-2 d-inline-block">যোগাযোগের তথ্য (Contact Info)</h5>
+                    <ul class="list-unstyled text-light small mt-2" style="opacity: 0.9;">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2 text-warning"></i> Jaigirchak, Moyna, Purba Medinipur, WB - 721644</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2 text-warning"></i> 7384169990 | 8391847274</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2 text-warning"></i> subhajitparia45@gmail.com</li>
+                    </ul>
+                    <div class="mt-3">
+                        <!-- ফেসবুক অফিসিয়াল পেজের ডাইরেক্ট লিংক -->
+                        <a href="https://www.facebook.com/share/19DG1gn7QU/" target="_blank" rel="noopener noreferrer" class="btn btn-facebook btn-sm rounded-circle me-2" title="JUCSC Facebook Page">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="btn btn-info btn-sm rounded-circle me-2 text-dark" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-danger btn-sm rounded-circle text-white" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary pt-3 mt-3 text-center">
+                <p class="text-light small mb-0" style="opacity: 0.8;">
+                    &copy; 2026 <strong>JAIGIRCHAK UNITED CULTURAL AND SPORTS CLUB</strong>. সর্বস্বত্ব সংরক্ষিত। <br>
+                    <span class="text-warning">সমাজ ও প্রকৃতির জন্য ভালোবাসার সাথে তৈরি <i class="fas fa-heart text-danger mx-1"></i></span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function showPage(pageId) {
+            if(event && event.preventDefault && event.target && event.target.tagName === 'A') {
+                event.preventDefault();
+            }
+
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            const targetSection = document.getElementById(pageId);
+            if(targetSection) {
+                targetSection.classList.add('active');
+            }
+
+            const navLinks = document.querySelectorAll('.nav-item-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('onclick') && link.getAttribute('onclick').includes(pageId)) {
+                     link.classList.add('active');
+                }
+            });
+
+            const mainNav = document.getElementById('main-nav');
+            const mainFooter = document.getElementById('main-footer');
+            
+            if (pageId === 'login') {
+                if(mainNav) mainNav.style.display = 'none';
+                if(mainFooter) mainFooter.style.display = 'none';
+                document.body.style.backgroundColor = '#138808';
+            } else {
+                if(mainNav) mainNav.style.display = 'block';
+                if(mainFooter) mainFooter.style.display = 'block';
+                document.body.style.backgroundColor = '#f8f9fa';
+            }
+
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
+            const navbarCollapse = document.getElementById('menu');
+            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                    toggle: false
+                });
+                bsCollapse.hide();
+            }
+            
+            try {
+                if(pageId !== 'login') {
+                     window.location.hash = pageId;
+                } else {
+                     history.replaceState(null, null, ' ');
+                }
+            } catch (error) {
+                console.warn("History API is restricted:", error);
+            }
+        }
+
+        /* 7384169990 নম্বর এ বার্তা পাঠাতে ফাংশন */
+        function sendMessage(type) {
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !subject || !message) {
+                alert('অনুগ্রহ করে নাম, বিষয় এবং বার্তার ঘরগুলি পূরণ করুন।');
+                return;
+            }
+
+            const targetNumber = '917384169990'; // ক্লাবের মূল যোগাযোগ নম্বর
+
+            if (type === 'whatsapp') {
+                let fullMsg = `*JUCSC ক্লাব মেসেজ*\n\n` +
+                              `👤 *নাম:* ${name}\n` +
+                              (phone ? `📞 *ফোন:* ${phone}\n` : '') +
+                              `📌 *বিষয়:* ${subject}\n` +
+                              `💬 *বার্তা:* ${message}`;
+
+                const encodedMsg = encodeURIComponent(fullMsg);
+                const waUrl = `https://wa.me/${targetNumber}?text=${encodedMsg}`;
+                window.open(waUrl, '_blank');
+            } else if (type === 'sms') {
+                let fullMsg = `JUCSC বার্তা\n` +
+                              `নাম: ${name}\n` +
+                              (phone ? `ফোন: ${phone}\n` : '') +
+                              `বিষয়: ${subject}\n` +
+                              `বার্তা: ${message}`;
+
+                const encodedMsg = encodeURIComponent(fullMsg);
+                const smsUrl = `sms:+${targetNumber}?body=${encodedMsg}`;
+                window.location.href = smsUrl;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.substring(1);
+            if (hash && document.getElementById(hash) && hash !== 'login') {
+                showPage(hash);
+            } else {
+                showPage('login'); // ডিফল্টভাবে এডমিন লগইন পেজ ওপেন হবে
+            }
+        });
+    </script>
+</body>
+</html>
